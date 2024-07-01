@@ -42,7 +42,7 @@ def login():
             flash('Invalid credentials', 'danger')
     return render_template('login.html')
 
-@app.route('/home')
+@app.route('/')
 @login_required
 def home():
     return render_template('home.html', username=current_user.username)
