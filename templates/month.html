@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ month }} Recordings</title>
+</head>
+<body>
+    <h2>{{ month }} Recordings</h2>
+    <ul>
+        {% for week in weeks %}
+            <li><a href="{{ url_for('week_recordings', month=month, week=week) }}">{{ week }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('recordings') }}">Back to Recordings</a>
+</body>
+</html>
